@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dedicacion de Amor</title>
+    <meta name="author" content="Zero">
+    <meta name="copyright" content="Zero - Código libre no comercial">
+    <meta name="description" content="Árbol de Amor Animado: una sorpresa interactiva y romántica para dedicar a tu pareja o ser querido. Código libre para uso personal, educativo o de inspiración.">
+    <meta name="keywords" content="amor, sorpresa, romántico, dedicatoria, animación, árbol, corazones, pareja, aniversario, regalo digital">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/style.mobile.css" media="only screen and (max-width: 600px)">
+    <style>
+        /* Tus estilos inline del arbol y corazones */
+        .tree-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            z-index: 2;
+        }
+        .animated-heart {
+            transform-origin: center;
+            animation: beat 1s infinite;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            20% { transform: scale(1.1); }
+            40% { transform: scale(0.95); }
+            60% { transform: scale(1.08); }
+            80% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div id="overlay">
+        <div class="lock-container">
+            <div class="lock-top"></div>
+            <div class="lock-body"></div>
+            <div class="lock-keyhole"></div>
+        </div>
+        <input type="password" id="passwordInput" placeholder="Ingresa el código">
+        <button id="unlockButton">Desbloquear</button>
+        <p id="errorMessage" class="error-message"></p>
+    </div>
+
+    <div id="mainContent" class="hidden">
+        <div id="floating-objects"></div>
+        <div class="dedication-text" id="dedication-text">
+            <div class="signature" id="signature"></div>
+            Para el amor de mi vida:Shelsy
+            Desde el primer momento supe que eras tu.
+            Tu sonrisa, tu voz, tu forma de ser...
+            en ti me hace sentir en casa.
+            Gracias por acompañarme en cada paso, por
+            entenderme incluso en silencio, y por
+            llenar mis dias de amor.
+            Te amo más de lo que las palabras pueden
+            expresar.
+            <br>
+            <span style="font-family: 'Times New Roman', serif; font-style: italic; font-size: 1.2em; color: #DC143C;">
+                Con amor, Tu chocolatico Jhorwan
+            </span>
+        </div>
+        <div class="countdown" id="countdown">
+            Llevamos juntos: 102 días
+            Nuestro aniversario: 262d 5h 57m 12s
+        </div>
+        <div class="tree-container" id="tree-container">
+            <img src="your-tree-image.png" alt="Árbol de corazones" style="width:100%; height:100%; object-fit: contain;">
+        </div>
+
+        <audio src="Music/Manu_Chao_-_Me_Gustas_Tu_(Hydr0.org).mp3" id="bg-music" preload="auto" loop></audio>
+
+        <script src="Js/script.js"></script>
+    </div>
+</body>
+</html>
